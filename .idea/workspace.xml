@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2d6ecd8-2136-4101-a741-82896c271ea8" name="Changes" comment="All Math Operations">
-      <change afterPath="$PROJECT_DIR$/src/Divide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Multiply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MyExceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ScannerCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Difference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Difference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Divide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Divide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Multiply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Multiply.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,13 +40,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -68,7 +69,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667745699160</updated>
-      <workItem from="1667745700477" duration="6141000" />
+      <workItem from="1667745700477" duration="10811000" />
+      <workItem from="1667814535982" duration="1943000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1667750137326</created>
@@ -77,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667750137326</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="All Math Operations">
+      <created>1667751990705</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667751990705</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +107,15 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="All Math Operations" />
     <option name="LAST_COMMIT_MESSAGE" value="All Math Operations" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

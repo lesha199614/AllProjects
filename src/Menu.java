@@ -1,46 +1,39 @@
 import java.util.Objects;
-import java.util.Scanner;
 
 public class Menu {
     private double value1;
     private double result;
-    protected Scanner scanner = new Scanner(System.in);
+    protected ScannerCheck scannerCheck = new ScannerCheck();
 
-    public void openMenu(){
+
+    protected void openMenu() {
         openMenuPrivate();
     }
+
     private void openMenuPrivate() {
-        int userValue = 0;
         System.out.println("Меню:");
         System.out.println("1: Подсчет математической операции");
         System.out.println("2: Выход");
-        while (userValue <= 0 || userValue >= 3) {
-            userValue = scanner.nextInt();
+        int userValue = scannerCheck.scannerInt();
+        while (userValue < 1 || userValue > 2) {
+            System.out.println("Данный пункт меню еще не доступен");
+            userValue = scannerCheck.scannerInt();
         }
         if (userValue == 2) {
             System.out.println("До свидания");
         } else {
-
             startCalculation();
         }
     }
 
-    private void startCalculation(){
+    private void startCalculation() {
         System.out.println("Введи первое число");
-        value1 = scanner.nextDouble();
+        value1 = scannerCheck.scannerDouble();
         startOperation();
     }
+
     private void startOperation() {
-        String userOperation = "default";
-        System.out.println("Введи тип операции:");
-        System.out.println("'+' для сложения");
-        System.out.println("'-' для вычитания");
-        System.out.println("'*' для умножения");
-        System.out.println("'/' для деления");
-        System.out.println("'0' для возврата в главное меню");
-        while (!Objects.equals(userOperation, "+") && !Objects.equals(userOperation, "-") && !Objects.equals(userOperation, "*") && !Objects.equals(userOperation, "/") && !Objects.equals(userOperation, "0")) {
-            userOperation = scanner.nextLine();
-        }
+        String userOperation = scannerCheck.scannerLine();
         switch (userOperation) {
             case "0":
                 openMenu();
@@ -71,11 +64,12 @@ public class Menu {
                 break;
         }
     }
-    private void nextOperation (){
+
+    private void nextOperation() {
         System.out.println("Продолжить?");
         System.out.println("1 - продолжаем работать с числом, 2 - сбросить результат, 3 - вернуться в меню");
-        int userChoice = scanner.nextInt();
-        if(userChoice == 1){
+        int userChoice = scannerCheck.scannerInt();
+        if (userChoice == 1) {
             value1 = result;
             startOperation();
         } else if (userChoice == 2) {
@@ -84,4 +78,6 @@ public class Menu {
             openMenu();
         }
     }
+
+
 }
