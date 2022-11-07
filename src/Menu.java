@@ -4,6 +4,7 @@ public class Menu {
     private double value1;
     private double result;
     protected ScannerCheck scannerCheck = new ScannerCheck();
+    private OpertionsHistory history = new OpertionsHistory();
 
 
     protected void openMenu() {
@@ -13,16 +14,20 @@ public class Menu {
     private void openMenuPrivate() {
         System.out.println("Меню:");
         System.out.println("1: Подсчет математической операции");
-        System.out.println("2: Выход");
+        System.out.println("2: История результатов");
+        System.out.println("3: Выход");
         int userValue = scannerCheck.scannerInt();
-        while (userValue < 1 || userValue > 2) {
+        while (userValue < 1 || userValue > 3) {
             System.out.println("Данный пункт меню еще не доступен");
             userValue = scannerCheck.scannerInt();
         }
-        if (userValue == 2) {
-            System.out.println("До свидания");
-        } else {
+        if (userValue == 1) {
             startCalculation();
+        } else if (userValue == 2){
+            history.showHistory();
+            openMenuPrivate();
+        } else {
+            System.out.println("До свидания");
         }
     }
 
@@ -42,24 +47,28 @@ public class Menu {
                 Sum sum = new Sum();
                 result = sum.sumOperation(value1);
                 System.out.println("Результат " + result);
+                history.updateHistory(result);
                 nextOperation();
                 break;
             case "-":
                 Difference difference = new Difference();
                 result = difference.differenceOperation(value1);
                 System.out.println("Результат " + result);
+                history.updateHistory(result);
                 nextOperation();
                 break;
             case "*":
                 Multiply multiply = new Multiply();
                 result = multiply.multiplyOperation(value1);
                 System.out.println("Результат " + result);
+                history.updateHistory(result);
                 nextOperation();
                 break;
             case "/":
                 Divide divide = new Divide();
                 result = divide.divideOperation(value1);
                 System.out.println("Результат " + result);
+                history.updateHistory(result);
                 nextOperation();
                 break;
         }

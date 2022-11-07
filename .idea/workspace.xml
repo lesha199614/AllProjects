@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2d6ecd8-2136-4101-a741-82896c271ea8" name="Changes" comment="All Math Operations">
-      <change afterPath="$PROJECT_DIR$/src/MyExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ScannerCheck.java" afterDir="false" />
+    <list default="true" id="c2d6ecd8-2136-4101-a741-82896c271ea8" name="Changes" comment="Added Operations' History">
+      <change afterPath="$PROJECT_DIR$/src/OpertionsHistory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Difference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Difference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Divide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Divide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Multiply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Multiply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScannerCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScannerCheck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667745699160</updated>
       <workItem from="1667745700477" duration="10811000" />
-      <workItem from="1667814535982" duration="1943000" />
+      <workItem from="1667814535982" duration="3957000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1667750137326</created>
@@ -86,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667751990705</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Scanner validation">
+      <created>1667816575229</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667816575229</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,7 +109,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="All Math Operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="All Math Operations" />
+    <MESSAGE value="Added Scanner validation" />
+    <MESSAGE value="Added Operations' History" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Operations' History" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -42,13 +42,13 @@ public class ScannerCheck {
 
     private String scannerLinePrivate(){
         String value = "default";
+        System.out.println("Введи тип операции:");
+        System.out.println("'+' для сложения");
+        System.out.println("'-' для вычитания");
+        System.out.println("'*' для умножения");
+        System.out.println("'/' для деления");
+        System.out.println("'0' для возврата в главное меню");
         while (!Objects.equals(value, "+") && !Objects.equals(value, "-") && !Objects.equals(value, "*") && !Objects.equals(value, "/") && !Objects.equals(value, "0")) {
-            System.out.println("Введи тип операции:");
-            System.out.println("'+' для сложения");
-            System.out.println("'-' для вычитания");
-            System.out.println("'*' для умножения");
-            System.out.println("'/' для деления");
-            System.out.println("'0' для возврата в главное меню");
             value = scanner.nextLine();
         }
         return value;
