@@ -1,7 +1,6 @@
 package ProjectCalculator;
 
 import java.util.Objects;
-import java.util.Scanner;
 
 public class ScannerCheck {
     protected java.util.Scanner scanner = new java.util.Scanner(System.in);

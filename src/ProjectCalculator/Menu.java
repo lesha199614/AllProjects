@@ -1,8 +1,6 @@
 package ProjectCalculator;
 
 public class Menu {
-    private double value1;
-    private double result;
     protected ScannerCheck scannerCheck = new ScannerCheck();
     private OpertionsHistory history = new OpertionsHistory();
 
@@ -33,11 +31,12 @@ public class Menu {
 
     private void startCalculation() {
         System.out.println("Введи первое число");
-        value1 = scannerCheck.scannerDouble();
-        startOperation();
+         double value1 = scannerCheck.scannerDouble();
+        startOperation(value1);
     }
 
-    private void startOperation() {
+    private void startOperation(double value1) {
+        double result = 0;
         String userOperation = scannerCheck.scannerLine();
         switch (userOperation) {
             case "0":
@@ -46,41 +45,32 @@ public class Menu {
             case "+":
                 Sum sum = new Sum();
                 result = sum.sumOperation(value1);
-                System.out.println("Результат " + result);
-                history.updateHistory(result);
-                nextOperation();
                 break;
             case "-":
                 Difference difference = new Difference();
                 result = difference.differenceOperation(value1);
-                System.out.println("Результат " + result);
-                history.updateHistory(result);
-                nextOperation();
+
                 break;
             case "*":
                 Multiply multiply = new Multiply();
                 result = multiply.multiplyOperation(value1);
-                System.out.println("Результат " + result);
-                history.updateHistory(result);
-                nextOperation();
                 break;
             case "/":
                 Divide divide = new Divide();
                 result = divide.divideOperation(value1);
-                System.out.println("Результат " + result);
-                history.updateHistory(result);
-                nextOperation();
                 break;
         }
+        System.out.println("Результат " + result);
+        history.updateHistory(result);
+        nextOperation(result);
     }
 
-    private void nextOperation() {
+    private void nextOperation(double result) {
         System.out.println("Продолжить?");
         System.out.println("1 - продолжаем работать с числом, 2 - сбросить результат, 3 - вернуться в меню");
         int userChoice = scannerCheck.scannerInt();
         if (userChoice == 1) {
-            value1 = result;
-            startOperation();
+            startOperation(result);
         } else if (userChoice == 2) {
             startCalculation();
         } else if (userChoice == 3) {

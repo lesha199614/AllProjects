@@ -1,7 +1,7 @@
 package ProjectCalculator;
 
 public class OpertionsHistory {
-    private double[] array = new double[]{0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d};
+    private double[] array = new double[10];
 
     private void updateHistoryPrivate(double newValue) {
         for (int i = array.length-1; i > 0; i--) {
