@@ -1,3 +1,5 @@
+package ProjectCalculator;
+
 public class Difference extends Menu{
 
     protected double differenceOperation (double value1){

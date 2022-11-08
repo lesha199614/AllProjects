@@ -1,3 +1,5 @@
+package ProjectCalculator;
+
 public class Multiply extends Menu{
 
     protected double multiplyOperation (double value1){

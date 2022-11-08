@@ -1,3 +1,5 @@
+package ProjectCalculator;
+
 public class OpertionsHistory {
     private double[] array = new double[]{0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d};
 

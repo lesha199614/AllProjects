@@ -1,4 +1,4 @@
-import java.util.Objects;
+package ProjectCalculator;
 
 public class Menu {
     private double value1;

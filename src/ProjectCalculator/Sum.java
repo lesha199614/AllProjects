@@ -1,3 +1,5 @@
+package ProjectCalculator;
+
 public class Sum extends Menu {
 
     protected double sumOperation(double value1){

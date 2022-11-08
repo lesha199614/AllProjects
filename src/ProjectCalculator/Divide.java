@@ -1,3 +1,5 @@
+package ProjectCalculator;
+
 public class Divide extends Menu{
 
     protected double divideOperation (double value1){
