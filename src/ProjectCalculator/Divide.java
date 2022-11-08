@@ -1,7 +1,8 @@
 package ProjectCalculator;
 
-public class Divide extends Menu{
+public class Divide {
 
+    private ScannerCheck scannerCheck = new ScannerCheck();
     protected double divideOperation (double value1){
         return divideOperationPrivate(value1);
     }

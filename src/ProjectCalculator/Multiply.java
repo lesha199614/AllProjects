@@ -1,7 +1,7 @@
 package ProjectCalculator;
 
-public class Multiply extends Menu{
-
+public class Multiply {
+    private ScannerCheck scannerCheck = new ScannerCheck();
     protected double multiplyOperation (double value1){
         return multiplyOperationPrivate(value1);
     }

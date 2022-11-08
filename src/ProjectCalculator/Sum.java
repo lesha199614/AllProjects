@@ -1,7 +1,8 @@
 package ProjectCalculator;
 
-public class Sum extends Menu {
+public class Sum {
 
+    private ScannerCheck scannerCheck = new ScannerCheck();
     protected double sumOperation(double value1){
         return sumOperationPrivate(value1);
     }

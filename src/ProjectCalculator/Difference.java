@@ -1,7 +1,8 @@
 package ProjectCalculator;
 
-public class Difference extends Menu{
+public class Difference{
 
+    private ScannerCheck scannerCheck = new ScannerCheck();
     protected double differenceOperation (double value1){
         return differenceOperationPrivate(value1);
     }

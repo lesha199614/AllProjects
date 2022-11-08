@@ -4,8 +4,6 @@ import java.util.Objects;
 
 public class ScannerCheck {
     protected java.util.Scanner scanner = new java.util.Scanner(System.in);
-
-
     protected int scannerInt(){
         return scannerIntPrivate();
     }

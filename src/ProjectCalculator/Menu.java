@@ -1,9 +1,8 @@
 package ProjectCalculator;
 
-public class Menu {
-    protected ScannerCheck scannerCheck = new ScannerCheck();
+public class Menu extends ScannerCheck{
     private OpertionsHistory history = new OpertionsHistory();
-
+    private ScannerCheck scannerCheck = new ScannerCheck();
 
     protected void openMenu() {
         openMenuPrivate();
