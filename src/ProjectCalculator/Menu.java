@@ -35,7 +35,7 @@ public class Menu extends ScannerCheck{
     }
 
     private void startOperation(double value1) {
-        double result = 0;
+        double result = 0d;
         String userOperation = scannerCheck.scannerLine();
         switch (userOperation) {
             case "0":
@@ -48,7 +48,6 @@ public class Menu extends ScannerCheck{
             case "-":
                 Difference difference = new Difference();
                 result = difference.differenceOperation(value1);
-
                 break;
             case "*":
                 Multiply multiply = new Multiply();
@@ -76,6 +75,4 @@ public class Menu extends ScannerCheck{
             openMenu();
         }
     }
-
-
 }
