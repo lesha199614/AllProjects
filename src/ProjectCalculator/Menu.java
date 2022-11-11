@@ -1,7 +1,10 @@
 package ProjectCalculator;
 
+import java.util.ArrayList;
+
 public class Menu extends ScannerCheck{
-    private OpertionsHistory history = new OpertionsHistory();
+//    private OpertionsHistory history = new OpertionsHistory();
+    private HistoryArrayList historyArrayList = new HistoryArrayList();
     private ScannerCheck scannerCheck = new ScannerCheck();
 
     protected void openMenu() {
@@ -21,7 +24,8 @@ public class Menu extends ScannerCheck{
         if (userValue == 1) {
             startCalculation();
         } else if (userValue == 2){
-            history.showHistory();
+            historyArrayList.showHistory();
+            //history.showHistory();
             openMenuPrivate();
         } else {
             System.out.println("До свидания");
@@ -59,7 +63,8 @@ public class Menu extends ScannerCheck{
                 break;
         }
         System.out.println("Результат " + result);
-        history.updateHistory(result);
+        historyArrayList.addValue(result);
+        //history.updateHistory(result);
         nextOperation(result);
     }
 

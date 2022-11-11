@@ -1,5 +1,7 @@
 package StringHW;
 
+import ProjectCalculator.MyExceptions;
+
 class TextModifications {
     private String text;
 
@@ -180,7 +182,7 @@ class TextModifications {
     private void checkIfNull() {
         if (text == null || text.equals("")) {
             try {
-                throw new MyExceptions ();
+                throw new MyExceptions();
             } catch (MyExceptions e){
                 e.nullString();
             }
