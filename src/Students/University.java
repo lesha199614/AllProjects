@@ -141,4 +141,24 @@ public class University {
     public void setUniversityName(String universityName) {
         this.universityName = universityName;
     }
+
+    public void addAverageStudentMark(){
+        addAverageStudentMarkPrivate();
+    }
+    private void addAverageStudentMarkPrivate() {
+        System.out.println("Средний балл студента " + universityName + ":");
+        System.out.println("Введи имя студента");
+        String name = scanner.next();
+        if (isStudentExist(name) > 0) {
+            for (Student student : listOfStudents){
+                if (name.equals(student.getName())){
+                    System.out.println(student.averageStudentMark());
+                }
+            }
+
+        } else {
+            System.out.println("Такого студента нет");
+        }
+        System.out.println("========================");
+    }
 }

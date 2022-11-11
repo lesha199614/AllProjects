@@ -24,6 +24,7 @@ public class Main {
         bntu.rating();
         bntu.deleteStudentScanner();
         bntu.getListOfStudents();
+        bntu.addAverageStudentMark();
     }
 
 }
