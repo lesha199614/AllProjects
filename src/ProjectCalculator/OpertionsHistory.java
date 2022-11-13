@@ -1,19 +1,25 @@
 package ProjectCalculator;
 
-public class OpertionsHistory {
+public class OpertionsHistory implements History{
     private double[] array = new double[10];
 
-    private void updateHistoryPrivate(double newValue) {
+    @Override
+    public void showHistory() {
+        showHistoryPrivate();
+    }
+    @Override
+    public void addValue(double newValue){
+        addValuePrivate(newValue);
+    }
+
+    private void addValuePrivate (double newValue) {
         for (int i = array.length-1; i > 0; i--) {
             array[i] = array[i - 1];
         }
         array[0] = newValue;
     }
-    protected void updateHistory(double newValue){
-        updateHistoryPrivate(newValue);
-    }
 
-    protected void showHistory() {
+    private void showHistoryPrivate() {
         System.out.println("==============================");
         System.out.println("История результатов:");
         for (int i = 0; i < array.length; i++) {

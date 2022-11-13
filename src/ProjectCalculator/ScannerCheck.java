@@ -8,22 +8,35 @@ public class ScannerCheck {
     protected int scannerInt() {
         return scannerIntPrivate();
     }
+
     private int scannerIntPrivate() {
         while (!scanner.hasNextInt()) {
+            try {
+                throw new MyExceptions();
+            } catch (MyExceptions e) {
+                e.invalidScannerResult();
+            }
             scanner.next();
         }
         return scanner.nextInt();
     }
+
     protected double scannerDouble() {
         return scannerDoublePrivate();
     }
+
     private double scannerDoublePrivate() {
         while (!scanner.hasNextDouble()) {
-            System.out.println("Введи валидное число");
+            try {
+                throw new MyExceptions();
+            } catch (MyExceptions e) {
+                e.invalidScannerResult();
+            }
             scanner.next();
         }
         return scanner.nextDouble();
     }
+
     private String scannerLinePrivate() {
         String value = "default";
         System.out.println("Введи тип операции:");
@@ -37,6 +50,7 @@ public class ScannerCheck {
         }
         return value;
     }
+
     protected String scannerLine() {
         return scannerLinePrivate();
     }

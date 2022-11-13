@@ -10,7 +10,11 @@ public class Divide {
         System.out.println("Введите делитель");
         double value2 = scannerCheck.scannerDouble();
         while (value2 == 0){
-            System.out.println("Нельзя делить на 0. Введи другое число");
+            try {
+                throw new MyExceptions();
+            } catch (MyExceptions e){
+            e.divideZero();
+        }
             value2 = scannerCheck.scannerDouble();
         }
         return value1 / value2;
