@@ -7,15 +7,16 @@ public class OpertionsHistory implements History{
     public void showHistory() {
         showHistoryPrivate();
     }
+    @Override
+    public void addValue(double newValue){
+        addValuePrivate(newValue);
+    }
 
-    private void updateHistoryPrivate(double newValue) {
+    private void addValuePrivate (double newValue) {
         for (int i = array.length-1; i > 0; i--) {
             array[i] = array[i - 1];
         }
         array[0] = newValue;
-    }
-    protected void updateHistory(double newValue){
-        updateHistoryPrivate(newValue);
     }
 
     private void showHistoryPrivate() {

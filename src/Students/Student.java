@@ -3,12 +3,10 @@ package Students;
 
 import java.util.ArrayList;
 
-public class Student{
+public class Student {
     private String name;
     private int age;
     private ArrayList<Integer> studentMarks;
-
-
 
     public Student(String name, int age, ArrayList<Integer> studentMarks) {
         this.name = name;
@@ -22,15 +20,14 @@ public class Student{
 
     protected double averageStudentMark() {
         int sum = 0;
-        if (studentMarks.size() == 0){
+        if (studentMarks.size() == 0) {
             return 0;
         }
         for (Integer mark : studentMarks) {
-            sum+=mark;
+            sum += mark;
         }
-        return (double)sum/studentMarks.size();
+        return (double) sum / studentMarks.size();
     }
-
 
     public String getName() {
         return name;
@@ -43,5 +40,4 @@ public class Student{
     public ArrayList<Integer> getStudentMarks() {
         return studentMarks;
     }
-
 }

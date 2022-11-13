@@ -17,10 +17,6 @@ public class University {
     }
 
     public void getListOfStudents() {
-        getListOfStudentsPrivate();
-    }
-
-    private void getListOfStudentsPrivate() {
         System.out.println("Список студентов " + universityName + ":");
         for (Student student : listOfStudents) {
             System.out.println("Name: " + student.getName() + ", age: " + student.getAge() +
@@ -30,10 +26,6 @@ public class University {
     }
 
     public void rating() {
-        ratingPrivate();
-    }
-
-    private void ratingPrivate() {
         double sum = 0;
         double rating = 0;
         int amountOfStudents = 0;
@@ -52,7 +44,7 @@ public class University {
         System.out.println("Поиск студента по имени в " + universityName + ": ");
         System.out.println("Введи имя студента");
         String name = scanner.next();
-        if (isStudentExist(name) > 0) {
+        if (isStudentExist(name)) {
             System.out.println("Такой студент есть");
         } else {
             System.out.println("Такого студента нет");
@@ -60,20 +52,16 @@ public class University {
         System.out.println("=====================");
     }
 
-    private int isStudentExist(String name) {
-        int studentExist = 0;
+    private boolean isStudentExist(String name) {
+        boolean studentExist = false;
         for (Student student : listOfStudents)
             if (name.equals(student.getName())) {
-                studentExist++;
+                studentExist = true;
             }
         return studentExist;
     }
 
     public void addStudentScanner() {
-        addStudentScannerPrivate();
-    }
-
-    private void addStudentScannerPrivate() {
         System.out.println("Добавление нового студента в " + universityName + ":");
         System.out.println("Введи имя студента");
         String name = scanner.next();
@@ -85,14 +73,10 @@ public class University {
     }
 
     public void addMarkToStudent() {
-        addMarkToStudentPrivate();
-    }
-
-    private void addMarkToStudentPrivate() {
         System.out.println("Добавление оценку студенту " + universityName + ":");
         System.out.println("Введи имя студента");
         String name = scanner.next();
-        if (isStudentExist(name) > 0) {
+        if (isStudentExist(name)) {
             System.out.println("Введи балл");
             int mark = scannerIntPrivate();
             for (Student student : listOfStudents) {
@@ -107,14 +91,11 @@ public class University {
     }
 
     public void deleteStudentScanner() {
-        deleteStudentScannerPrivate();
-    }
-    private void deleteStudentScannerPrivate() {
         List<Student> studentsToRemove = new ArrayList<>();
         System.out.println("Исключение студента из " + universityName + ":");
         System.out.println("Введи имя студента");
         String name = scanner.next();
-        if (isStudentExist(name) > 0) {
+        if (isStudentExist(name)) {
             for (Student student : listOfStudents) {
                 if (name.equals(student.getName())) {
                     studentsToRemove.add(student);
@@ -122,8 +103,10 @@ public class University {
             }
             listOfStudents.removeAll(studentsToRemove);
             System.out.println("Студент исключен");
-            System.out.println("===========================");
+        } else {
+            System.out.println("Такого студента нет");
         }
+        System.out.println("===========================");
     }
 
     private int scannerIntPrivate() {
@@ -142,16 +125,13 @@ public class University {
         this.universityName = universityName;
     }
 
-    public void addAverageStudentMark(){
-        addAverageStudentMarkPrivate();
-    }
-    private void addAverageStudentMarkPrivate() {
+    public void addAverageStudentMark() {
         System.out.println("Средний балл студента " + universityName + ":");
         System.out.println("Введи имя студента");
         String name = scanner.next();
-        if (isStudentExist(name) > 0) {
-            for (Student student : listOfStudents){
-                if (name.equals(student.getName())){
+        if (isStudentExist(name)) {
+            for (Student student : listOfStudents) {
+                if (name.equals(student.getName())) {
                     System.out.println(student.averageStudentMark());
                 }
             }

@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Integer> AliakseiMarks = new ArrayList<>();
-        ArrayList<Integer> LizaMarks = new ArrayList<>();
-        ArrayList<Student> BNTUStudents = new ArrayList<>();
-        Student Aliaksei = new Student("Aliaksei", 26, AliakseiMarks);
-        Student Liza = new Student("Liza", 24, LizaMarks);
-        University bntu = new University("BNTU",BNTUStudents);
-        BNTUStudents.add(Aliaksei);
-        BNTUStudents.add(Liza);
-        AliakseiMarks.add(10);
-        AliakseiMarks.add(8);
-        LizaMarks.add(9);
-        LizaMarks.add(6);
+        ArrayList<Integer> aliakseiMarks = new ArrayList<>();
+        ArrayList<Integer> lizaMarks = new ArrayList<>();
+        ArrayList<Student> bntuStudents = new ArrayList<>();
+        Student aliaksei = new Student("Aliaksei", 26, aliakseiMarks);
+        Student liza = new Student("Liza", 24, lizaMarks);
+        University bntu = new University("BNTU", bntuStudents);
+        bntuStudents.add(aliaksei);
+        bntuStudents.add(liza);
+        aliakseiMarks.add(10);
+        aliakseiMarks.add(8);
+        lizaMarks.add(9);
+        lizaMarks.add(6);
         //методы
         bntu.addStudentScanner();
         bntu.addMarkToStudent();

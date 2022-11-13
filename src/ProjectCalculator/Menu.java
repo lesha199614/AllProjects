@@ -64,7 +64,7 @@ public class Menu extends ScannerCheck{
         }
         System.out.println("Результат " + result);
         historyArrayList.addValue(result);
-        //history.updateHistory(result);
+//        history.addValue(result);
         nextOperation(result);
     }
 

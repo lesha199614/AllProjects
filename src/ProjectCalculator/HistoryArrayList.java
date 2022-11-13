@@ -5,11 +5,11 @@ import java.util.List;
 
 public class HistoryArrayList implements History {
 
-    List<Double> HistoryList = new ArrayList<>(10);
+    List<Double> historyList = new ArrayList<>();
 
     @Override
     public void showHistory() {
-        System.out.println(HistoryList.toString());
+        System.out.println(historyList.toString());
     }
 
     public void addValue(double newValue){
@@ -17,9 +17,6 @@ public class HistoryArrayList implements History {
     }
 
     private void addValuePrivate(double newValue) {
-        if (HistoryList.size() > 9) {
-            HistoryList.remove(9);
-        }
-        HistoryList.add(0,newValue);
+        historyList.add(0,newValue);
     }
 }
